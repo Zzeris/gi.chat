@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gi.Chat</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
 
     <link rel="stylesheet" href="styles.css">
@@ -20,7 +20,7 @@
     </form>
 
     <script type="text/javascript">
-        var socket = io('https://gichat.herokuapp.com/');
+        const socket = io('https://gichat.herokuapp.com/');
 
         function renderMessage(message) {
             $('.messages').append('<div class="message"><strong>'+ message.author +'</strong>: '+ message.message +'</div>');
@@ -39,11 +39,11 @@
         $('#chat').submit(function(event){
             event.preventDefault();
 
-            var author = $('input[name=username]').val();
-            var message = $('input[name=message]').val();
+            const author = $('input[name=username]').val();
+            const message = $('input[name=message]').val();
 
             if (author.length && message.length) {
-                var messageObject = {
+                const messageObject = {
                     author: author,
                     message: message
                 };
@@ -51,6 +51,7 @@
                 renderMessage(messageObject);
 
                 socket.emit('sendMessage', messageObject);
+
             }
         });
     </script>
