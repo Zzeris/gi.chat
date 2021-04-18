@@ -1,4 +1,4 @@
 # Gi.Chat
 Chat Maferente
 
-## [Clique Aqui](https://gichat.herokuapp.com/)
+![Screenshot 1](screenshot.png)
