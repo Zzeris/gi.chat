@@ -41,6 +41,7 @@
 
             const author = $('input[name=username]').val();
             const message = $('input[name=message]').val();
+            const element = document.querySelector(".messages");
 
             if (author.length && message.length) {
                 const messageObject = {
@@ -52,6 +53,9 @@
 
                 socket.emit('sendMessage', messageObject);
 
+                element.scrollTop = element.scrollHeight;
+
+                $('input[name=message]').val("")
             }
         });
     </script>
