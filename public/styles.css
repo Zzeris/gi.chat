@@ -7,7 +7,25 @@ html, body {
     padding: 0;
     box-sizing: border-box;
   }
+
+  @media(max-width: 1080px) {
+    html {
+      font-size: 93.75%;
+    }
+  }
+
+  @media(max-width: 720px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
   
+  @media(max-width: 360px) {
+    html {
+      font-size: 74.25%;
+    }
+  }
+
   #chat {
     height: 100%;
     display: flex;
@@ -17,30 +35,44 @@ html, body {
   }
   
   input {
-    width: 600px;
+    width: 40rem;
     border: 1px solid #ddd;
-    height: 50px;
-    padding: 0 20px;
-    font-size: 14px;
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1rem;
   }
   
   button {
-    width: 600px;
-    height: 50px;
-    font-size: 14px;
+    width: 40rem;
+    height: 3rem;
+    font-size: 1.2rem;
     background: #069;
     text-align: center;
-    line-height: 50px;
+    line-height: 2rem;
     font-weight: bold;
     color: #FFF;
-    margin-top: 10px;
+    margin-top: 1rem;
   }
   
   .messages {
-    width: 600px;
-    height: 400px;
-    margin: 20px 0;
+    width: 40rem;
+    height: 20rem;
+    margin: 1rem 0;
     border: 1px solid #ddd;
-    padding: 20px;
-    overflow:auto;
+    padding: 1rem;
+    overflow: auto;
+  }
+
+  .message {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .message strong {
+    margin-right: 0.5rem;
+  }
+
+  .message span {
+    overflow: hidden;
+	  overflow-wrap: break-word;
   }

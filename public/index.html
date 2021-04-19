@@ -23,7 +23,7 @@
         const socket = io('https://gichat.herokuapp.com/');
 
         function renderMessage(message) {
-            $('.messages').append('<div class="message"><strong>'+ message.author +'</strong>: '+ message.message +'</div>');
+            $('.messages').append('<div class="message"><strong>'+ message.author +':</strong><span>'+ message.message +'</span></div>');
         };
 
         socket.on('previousMessages', function(messages) {
